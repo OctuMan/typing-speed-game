@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <div class="game-container">
+            <header>
+                <h1 class="game-title">Speed typing game</h1></header>
+            <div class="game-level">
+                <label class="level-label">Current level : <select name="game-levels" class="select-level">
+                    <option>Easy</option>
+                    <option>Normal</option>
+                    <option>Hard</option>
+                </select>
+            </label>
+                
+            </div>
+            <div class="word-area">Click start to play</div>
+            <div class="input-area">
+                <input type="text" id="word-input" placeholder="type the word ...">
+            </div>
+            <div class="next-word">Next words will be here ...</div>
+            <div class="controles">
+                <div >Score :<span class="score"> </span></span></div>
+                <div >High score : <span class="higher-score"></span></div>
+                <div >Time left : <span class="time-left"> </span></div>
+            </div>
+            <div class="game-buttons">
+                <input type="button" id="start-button" value="Start">
+                <input type="button" id="restart-button" value="Restart">
+            </div>
+            <div class="result-message"><span></span></div>
+           
+            
+        </div> 
+        <div class="instructions">
+            <h1 class="inst-title">Instructions</h1>
+            <div class="instructions-content"></div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

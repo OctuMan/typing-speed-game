@@ -1,0 +1,265 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  color: #2c3e50;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Container */
+.game-container {
+  flex: 2 1 600px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(100, 100, 111, 0.15);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  min-width: 300px;
+}
+
+/* Title */
+.game-title {
+  font-weight: 800;
+  font-size: 2.6rem;
+  text-align: center;
+  letter-spacing: 0.06em;
+  /* color: #1e293b; */
+  user-select: none;
+   background: linear-gradient(120deg, #eef3f7 0%, #3F51B5 100%); /* Your gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  color: transparent;
+  margin-bottom: 25px;
+}
+/* Select feild  */
+.game-level{
+    padding-left: 5px;
+}
+.level-label {
+    font-size: 17px;
+    font-weight: bold;
+    color: #334155;
+}
+.select-level {
+    border: none;
+    border: 2px solid #c7d2fe;
+    padding: 5px;
+    background: #f8fafc;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #334155;
+    text-align: center;
+    
+}
+.select-level:focus {
+  outline: none;
+}
+.select-level option{
+  
+}
+/* Word display */
+.word-area {
+  background: #e0e7ff;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 12px;
+  color: #334155;
+  letter-spacing: 0.22em;
+  user-select: text;
+  box-shadow: inset 0 2px 8px rgba(99, 102, 241, 0.15);
+}
+
+/* Input */
+#word-input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border: 2px solid #c7d2fe;
+  color: #334155;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color 0.25s ease;
+  background: #f8fafc;
+}
+#word-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: #eef2ff;
+}
+
+/* Next words container */
+.next-word {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: #f1f5f9;
+  border-radius: 12px;
+  border: 1.5px solid #cbd5e1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #64748b;
+  user-select: none;
+  min-height: 50px;
+  align-items: center;
+}
+.next-word span {
+  padding: 0.3rem 0.8rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+  cursor: default;
+  transition: background-color 0.25s ease;
+}
+.next-word span:hover {
+  background-color: #c7d2fe;
+}
+
+/* Controls container */
+.controles {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.25rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+/* Each control box */
+.controles div {
+  flex: 1;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 0.9rem 0;
+  box-shadow: 0 5px 10px rgba(99, 102, 241, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s ease;
+  min-width: 80px;
+}
+.controles div:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+.controles div span.label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 0.2rem;
+}
+.controles div span {
+  font-size: 1.7rem;
+  color: #e0e7ff;
+}
+
+/* Specific styling for time left to highlight urgency */
+.controles div span.time-left {
+  color: #f87171;
+}
+
+/* Buttons */
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.game-buttons input[type="button"] {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+  min-width: 120px;
+}
+.game-buttons input[type="button"]:hover {
+  background-color: #4338ca;
+  transform: scale(1.05);
+}
+
+/* Result message */
+.result-message {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #334155;
+  user-select: none;
+  margin-top: 1rem;
+  min-height: 2rem;
+  /* keep space reserved */
+}
+.result-message span.good {
+  color: #22c55e;
+}
+.result-message span.wrong {
+  color: #ef4444;
+}
+
+/* Instructions */
+.instructions {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 1.6rem 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #475569;
+  box-shadow: 0 3px 8px rgba(71, 85, 105, 0.1);
+  flex: 1 1 320px;
+  max-width: 400px;
+  user-select: none;
+  min-width: 280px;
+  height: fit-content;
+  align-self: flex-start; /* so it doesn’t stretch vertically */
+}
+.instructions-content ul {
+  padding-left: 1.5rem;
+  margin-top: 0.8rem;
+  color: #64748b;
+  list-style-type: decimal;
+  font-weight: 500;
+}
+.instructions-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .game-container,
+  .instructions {
+    max-width: 100%;
+    flex: none;
+  }
+  .game-container {
+    margin-bottom: 2rem;
+  }
+}
